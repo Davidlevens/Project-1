@@ -338,7 +338,7 @@ $(document).ready(function () {
 
         var city = $("#inputCity").val().trim();
 
-        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&APPID=0015317ad02a5bd572199f206fdd831f";
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=0015317ad02a5bd572199f206fdd831f";
 
         $.ajax({
             url: queryURL,
