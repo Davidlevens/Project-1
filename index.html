@@ -2,81 +2,280 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Let's Go! - Travel Planner</title>
 
-  <!--CSS-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <!-- BOOTSTRAP AND CSS REFERENCE -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-  <!--JQuery-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./assets/lightslider/dist/css/lightslider.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightslider@1.1.6/lightslider.jquery.json">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script src="assets/lightslider/dist/css/lightslider.css"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+
+
+    <script src="javascript/app.js"></script>
+
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    <!-- NAVBAR -->
+    <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img id="logo1" src="assets/images-sounds/logo1.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-  <!-- Carousel -->
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-      <div id="search-box" class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-            aria-describedby="button-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-          </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="" class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" href="#">Connect</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/images/bady-qb-o8oWpqXTYbY-unsplash.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/images/norman-grande-71XkPe_1Ang-unsplash.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/images/joseph-costa-i9AmVEjT8VI-unsplash.jpg" class="d-block w-100" alt="...">
-      </div>
+    </nav> -->
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <div class="row" style="padding: 2%;">
+            <!-- MODAL WITH BUTTONS -->
+            <div class="col-md-12">
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Checkout this recommendations</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- buttons -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- JUMBOTRON -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid" id="jumbotron">
+                    <div class="container">
+                        <h1>
+                            Let's Go! 
+                        </h1>
+                        <h3>
+                            Travel to Live
+                        </h3>
+                        <!-- <img src=" assets/images-sounds/logo1.png" alt="" id="logo2"> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEARCH BUTTON AND MODAL BUTTON -->
+        <div class="row">
+            <div class="input-group input-group-lg">
+                <input type="text" id="inputCity" class="form-control" aria-label="Sizing example input"
+                    placeholder="Type in your destination city and country" aria-describedby="inputGroup-sizing-sm">
+                &nbsp;&nbsp;<div class="mx-auto" id="btnBox">
+                    <button type="button" id="searchCity" class="btn btn-secondary btn-lg searchNew">
+                    Let's go!
+                    </button>
+                </div>
+            </div>            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mx-auto" id="">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Istanbul
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Paris
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Amsterdam
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> San Francisco
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> New York
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Buenos Aires
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Madrid
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Beijing
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> Ibiza
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row" style="padding: 1%;"></div>
+        <!-- PAPER PLANE ICON -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mx-auto" id="paperPlane">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 1%;"></div>
+
+        <!-- SEARCH RESULTS SECTION WITH WEATHER, MAP AND NEWS -->
+        <div class="search-results">
+            <!-- DESTINATION IMAGE -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-img bg-dark text-white" id="cityImg">
+                        <div class="card-img" id="cover" src="" alt="Card image"></div>
+                        <div class="card-img-overlay" id="cityNameDisplay"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding: 1%;"></div>
+
+            <!-- WEATHER DISPLAY -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" id="temperature">Map</h5>
+                            <p class="card-text" id="max-min-temp"></p>
+                            <!-- <img class="card-text" id="condition" alt=""> -->
+                            <p class="card-text" id="wcondition"></p>
+                            <p class="card-text" id="wind"></p>
+                            <p class="card-text" id="humidity"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- MAP DISPLAY -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body mapGoogle">
+                            <div style="height:100%; width:100%;">
+                                <div id="map-display">
+                                    <div id="map"></div>
+                                    <script async defer
+                                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-ExlB5HkgVE9M5_lIfM2SE7z6aRoWlXg&libraries=places&callback=initMap">
+                                        </script>
+                                </div>
+                            </div>
+                            <div class="col-md-2 restaurants">
+                                <button type="button" class="btn btn-light" id="Restaurant">Restaurant</button>
+                            </div>
+                            <div class="col-md-2 restaurants">
+                                <button type="button" class="btn btn-light" id="Store">Store</button>
+                            </div>
+                            <div class="col-md-2 restaurants">
+                                <button type="button" class="btn btn-light" id="Bar">Bar</button>
+                            </div>
+                            <div class="col-md-2 restaurants">
+                                <button type="button" class="btn btn-light" id="Museum">Museum</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding: 1%;"></div>
+
+            <!-- NEWS DISPLAY -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card" id="newsFeed">
+                        <div class="card-body">
+                            <h5 class="card-title" id="news-Feed">Travel Warnings</h5>
+                            <div id="root">
+                                <!-- <img src="logo.png" /> -->
+                                <div class="container">
+
+                                </div>
+                            </div>
+                            <!-- <button class="btn btn-primary btn-lg" id="news-Feed">Let´s see some news</button>
+                            <ul id="slider">
+                            </ul> -->
+
+                        </div>           
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <!-- Cards -->
-  <div class="card" style="width: 18rem;">
-    <img src="assets/images/deanna-ritchie-wORTURlz7jg-unsplash.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-      <a href="#" class="btn btn-primary">Flights</a>
+    <div class="row" style="padding: 1%;"></div>
     </div>
-  </div>
 
 
+    </div>
+    </div>
+
+    <!-- VARIOS SCRIPTS FOR REFERENCE  -->
 
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <!-- <script src="assets/javascript/script.js"></script> -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCtxEzFYTkLZ9xyZAomNmw7Oz3r6B8w3ew&callback=initMap"
+        async defer></script>
+
+
 </body>
+
 
 </html>
