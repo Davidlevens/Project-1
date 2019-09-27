@@ -114,8 +114,8 @@ $(document).ready(function () {
 
 
 //     // Code radio buttons
-//    $(document.body).on(“click”, “.top-places”, function () {
-//        var place = $(this).attr(‘data-place’);
+//    $(document.body).on("click", ".top-places", function () {
+//        var place = $(this).attr("data-place");
 //        console.log(place);
 //        doSearch(place)
 //    });
@@ -124,6 +124,8 @@ $(document).ready(function () {
 //        // 2. get weather
 //        // 3. get packing lisgt
 //    }
+
+//
 
 
     $("#searchCity").on("click", function () {
@@ -176,19 +178,21 @@ $(document).ready(function () {
 
     // FIREBASE
 
-    var config = {
-        apiKey: "AIzaSyCzRedky3Rg5LZZdNPmZv4wIKCiE6bvAgk",
-        authDomain: "where2go-db.firebaseapp.com",
-        databaseURL: "https://where2go-db.firebaseio.com",
-        projectId: "where2go-db",
-        storageBucket: "where2go-db.appspot.com",
-        messagingSenderId: "1037462210811"
-    }
-
-    firebase.initializeApp(config);
-
-    var database = firebase.database();
-
+    var firebaseConfig = {
+        apiKey: "AIzaSyAkBpVFYyWDdcG2PbcsJXVA0mGC1qn2KYo",
+        authDomain: "booming-monitor-252720.firebaseapp.com",
+        databaseURL: "https://booming-monitor-252720.firebaseio.com",
+        projectId: "booming-monitor-252720",
+        storageBucket: "",
+        messagingSenderId: "718629106456",
+        appId: "1:718629106456:web:9e5f5631f940c3e86ca46d"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    
+      // Get a reference to the database service
+      var database = firebase.database();
+    
 
 
     $("#searchCity").click(function (e) {
@@ -204,7 +208,8 @@ $(document).ready(function () {
     });
 
     database.ref().on("child_added", function (snapshot) {
-
+         
+        var path = "project-1"
         var btndump = $(".modal-body");
         var city = snapshot.val().citysearched;
         var cityBtn = $("<button>");
@@ -350,8 +355,9 @@ $(document).ready(function () {
         event.preventDefault();
 
         var city = $("#inputCity").val().trim();
+        
 
-        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=0015317ad02a5bd572199f206fdd831f";
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=b9c4e2e03106a1fd6d052f7ae1365efb";
 
         $.ajax({
             url: queryURL,
@@ -366,12 +372,12 @@ $(document).ready(function () {
             var iconurl = "http://openweathermap.org/img/w/" + iconW + ".png";
 
 
-            $("#temperature").text("Temperature:  " + Math.round(temp)  + "°F");
-            $("#max-min-temp").text("Max/Min Temp:  " + Math.round(response.main.temp_max) + "°F / " + Math.round(response.main.temp_min) + "°F");
+            $("#temperature").text("Temperature:  " + Math.round(temp)  + " °F");
+            $("#max-min-temp").text("Max/Min Temp:  " + Math.round(response.main.temp_max) + " °F / " + Math.round(response.main.temp_min) + " °F");
             // $("#condition").attr("src", iconurl);
             // $("#wcondition").text("Condition: " + response.weather.id);
-            $("#wind").text("Wind Speed: " + response.wind.speed  + "mph");
-            $("#humidity").text("Humidity: " + response.main.humidity  + "%");
+            $("#wind").text("Wind Speed: " + Math.round(response.wind.speed)  +  " mph");
+            $("#humidity").text("Humidity: " + response.main.humidity  + " %");
 
             console.log(temp)
 
