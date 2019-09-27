@@ -113,6 +113,19 @@ $(document).ready(function () {
     }
 
 
+//     // Code radio buttons
+//    $(document.body).on(“click”, “.top-places”, function () {
+//        var place = $(this).attr(‘data-place’);
+//        console.log(place);
+//        doSearch(place)
+//    });
+//    function doSearch(place) {
+//        // 1. get map
+//        // 2. get weather
+//        // 3. get packing lisgt
+//    }
+
+
     $("#searchCity").on("click", function () {
         city = $("#inputCity").val();
         geocodeAdress(geocoder, map);
@@ -217,7 +230,7 @@ $(document).ready(function () {
 
 
     // AUTOCOMPLETE LOCATION
-    //$("input").geocomplete();
+    // $("input").geocomplete();
 
     // Trigger geocoding request.
     $("#searchCity").click(function () {
@@ -353,12 +366,12 @@ $(document).ready(function () {
             var iconurl = "http://openweathermap.org/img/w/" + iconW + ".png";
 
 
-            $("#temperature").text("Temperature:  " + parseInt(temp) + "°C");
-            $("#max-min-temp").text("Max/Min Temp:  " + response.main.temp_max + "°C / " + response.main.temp_min + "°C");
+            $("#temperature").text("Temperature:  " + Math.round(temp)  + "°F");
+            $("#max-min-temp").text("Max/Min Temp:  " + Math.round(response.main.temp_max) + "°F / " + Math.round(response.main.temp_min) + "°F");
             // $("#condition").attr("src", iconurl);
             // $("#wcondition").text("Condition: " + response.weather.id);
-            $("#wind").text("Wind Speed: " + response.wind.speed + "km/h");
-            $("#humidity").text("Humidity: " + response.main.humidity + "%");
+            $("#wind").text("Wind Speed: " + response.wind.speed  + "mph");
+            $("#humidity").text("Humidity: " + response.main.humidity  + "%");
 
             console.log(temp)
 
