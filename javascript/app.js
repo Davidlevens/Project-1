@@ -333,7 +333,6 @@ $(document).ready(function () {
         $('#paperPlane').fadeOut('slow', function () {
             $('.search-results').fadeIn("slow");
         });
-        
     });
 
     //a timer will call this function, and the rotation will begin
