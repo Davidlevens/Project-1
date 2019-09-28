@@ -120,6 +120,7 @@ $(document).ready(function () {
     //        doSearch(place);
     //        geocodeAdress(geocoder, map);
     //    });
+    //    getWeather(event);
     //    function doSearch(place) {
     //        // 1. get map
     //        // 2. get weather
@@ -236,8 +237,7 @@ $(document).ready(function () {
     });
 
 
-    // AUTOCOMPLETE LOCATION
-    // $("input").geocomplete();
+   
 
     // Trigger geocoding request.
     $("#searchCity").click(function () {
@@ -312,7 +312,7 @@ $(document).ready(function () {
                 console.log(queryURL);
                 console.log(response);
                 var slides = response.articles.map((article) => {
-                    var slide = $("<li class='slide'>");
+                    var slide = $("<div class='slide'>");
                     var newsTitle = $("<p class='newsTitle'>");
                     newsTitle.text(article.title);
 
@@ -394,122 +394,8 @@ $(document).ready(function () {
 
 
 
-    // //Open Weather Map API Documentation
-    // //Current Weather Data
-    // var unirest = require("unirest");
-
-    // var req = unirest("GET", "https://community-open-weather-map.p.rapidapi.com/weather");
-
-    // req.query({
-    //     "callback": "test",
-    //     "id": "2172797",
-    //     "units": "\"metric\" or \"imperial\"",
-    //     "mode": "xml, html",
-    //     "q": "London,uk"
-    // });
-
-    // req.headers({
-    //     "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-    //     "x-rapidapi-key": "608dc029b2msh7a774b700e1f7cep12fad0jsn787567011130"
-    // });
-
-
-    // req.end(function (res) {
-    //     if (res.error) throw new Error(res.error);
-
-    //     console.log(res.body);
-    // });
-
-    // //Forcast Weather Data
-    // var unirest = require("unirest");
-
-    // var req = unirest("GET", "https://community-open-weather-map.p.rapidapi.com/forecast");
-
-    // req.query({
-    //     "q": "london,uk"
-    // });
-
-    // req.headers({
-    //     "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-    //     "x-rapidapi-key": "608dc029b2msh7a774b700e1f7cep12fad0jsn787567011130"
-    // });
-
-
-    // req.end(function (res) {
-    //     if (res.error) throw new Error(res.error);
-
-    //     console.log(res.body);
-    // });
-
-    // $(document).ready(function () {
-    //     var appID = "PUT YOUR API KEY HERE";
-
-    //     $(".query_btn").click(function () {
-    //         var query_param = $(this).prev().val();
-    //     })
-    // });
-
-    // $(document).ready(function () {
-    //     var appID = "PUT YOUR API KEY HERE";
-
-    //     $(".query_btn").click(function () {
-
-    //         var query_param = $(this).prev().val();
-
-    //         if ($(this).prev().attr("placeholder") == "City") {
-    //             var weather = "http://api.openweathermap.org/data/2.5/weather?q=" + query_param + "&APPID=" + appID;
-    //         } else if ($(this).prev().attr("placeholder") == "Zip Code") {
-    //             var weather = "http://api.openweathermap.org/data/2.5/weather?zip=" + query_param + "&APPID=" + appID;
-    //         }
-    //     })
-    // });
-
-
-    // $(document).ready(function () {
-    //     var appID = "PUT YOUR API KEY HERE";
-
-    //     $(".query_btn").click(function () {
-
-    //         var query_param = $(this).prev().val();
-
-    //         if ($(this).prev().attr("placeholder") == "City") {
-    //             var weather = "http://api.openweathermap.org/data/2.5/weather?q=" + query_param + "&APPID=" + appID;
-    //         } else if ($(this).prev().attr("placeholder") == "Zip Code") {
-    //             var weather = "http://api.openweathermap.org/data/2.5/weather?zip=" + query_param + "&APPID=" + appID;
-    //         }
-
-    //         $.getJSON(weather, function (json) {
-    //             $("#city").html(json.name);
-    //             $("#main_weather").html(json.weather[0].main);
-    //             $("#description_weather").html(json.weather[0].description);
-    //             $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
-    //             $("#temperature").html(json.main.temp);
-    //             $("#pressure").html(json.main.pressure);
-    //             $("#humidity").html(json.main.humidity);
-    //         });
-    //     })
-
-    //     // Optional Code for temperature conversion
-    //     var fahrenheit = true;
-
-    //     $("#convertToCelsius").click(function () {
-    //         if (fahrenheit) {
-    //             $("#temperature").text(((($("#temperature").text() - 32) * 5) / 9));
-    //         }
-    //         fahrenheit = false;
-    //     });
-
-    //     $("#convertToFahrenheit").click(function () {
-    //         if (fahrenheit == false) {
-    //             $("#temperature").text((($("#temperature").text() * (9 / 5)) + 32));
-    //         }
-    //         fahrenheit = true;
-    //     });
-    // });
+   
 });
 
 
 
-// <script async defer
-//     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBNs5xGO2H4kcLTK3eoxf966QgDaqseK4&callback=initMap">
-// </script>
