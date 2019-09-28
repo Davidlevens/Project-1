@@ -117,7 +117,8 @@ $(document).ready(function () {
 //    $(document.body).on("click", ".top-places", function () {
 //        var place = $(this).attr("data-place");
 //        console.log(place);
-//        doSearch(place)
+//        doSearch(place);
+//        geocodeAdress(geocoder, map);
 //    });
 //    function doSearch(place) {
 //        // 1. get map
@@ -192,7 +193,8 @@ $(document).ready(function () {
     
       // Get a reference to the database service
       var database = firebase.database();
-    
+
+      var path = "project-1";
 
 
     $("#searchCity").click(function (e) {
@@ -209,7 +211,7 @@ $(document).ready(function () {
 
     database.ref().on("child_added", function (snapshot) {
          
-        var path = "project-1"
+        
         var btndump = $(".modal-body");
         var city = snapshot.val().citysearched;
         var cityBtn = $("<button>");
@@ -280,6 +282,7 @@ $(document).ready(function () {
         $("#cityNameDisplay").empty();
 
         $("#cityNameDisplay").append(citytName);
+        // $("#cityNameDisplay").append(name + ", " + country);
 
     });
 
@@ -296,12 +299,13 @@ $(document).ready(function () {
         city = city.split(",")[0];
         console.log(city);
 
-        var queryURL = 'https://newsapi.org/v2/everything?' +
+        // 'q=' + country +
+        var queryURL = 'https://newsapi.org/v2/top-headlines?' +
             'q=' + city +
-            '&from=2018-11-28&' +
+            '&from=2019-09-27&' +
             'sortBy=popularity&' +
             'language=en&' +
-            'apiKey=d609a00248ff4cf99663ebecb97d3e29';
+            'apiKey=2e54b9d0bb014c33b792823cbd90ea19';
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -364,10 +368,12 @@ $(document).ready(function () {
             method: "GET"
 
         }).then(function (response) {
-            console.log(response);
+            console.log("line369" + response);
             console.log(queryURL);
 
             var temp = response.main.temp;
+            var name = response.name;
+            var country = response.sys.country;
             var iconW = response.weather.icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconW + ".png";
 
@@ -379,7 +385,8 @@ $(document).ready(function () {
             $("#wind").text("Wind Speed: " + Math.round(response.wind.speed)  +  " mph");
             $("#humidity").text("Humidity: " + response.main.humidity  + " %");
 
-            console.log(temp)
+            console.log(temp);
+            console.log(name + ", " + country);
 
 
         });
