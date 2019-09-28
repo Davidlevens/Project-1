@@ -52,6 +52,22 @@ body {
     width: 100%;
 }
 
+.newsTitle {
+    font-size: 20px;
+    color: black;
+    background-color: #e5e6eb;
+}
+
+.newsDes {
+    font-size: 15px;
+    background-color: antiquewhite;
+}
+
+#slider {
+    height: 500px;
+    overflow-y: auto;
+}
+
 h1{
 
     font-size: 100px;
