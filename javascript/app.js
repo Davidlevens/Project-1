@@ -369,8 +369,7 @@ $(document).ready(function () {
             var temp = response.main.temp;
             var name = response.name;
             var country = response.sys.country;
-            var iconW = response.weather.icon;
-            var iconurl = "http://openweathermap.org/img/w/" + iconW + ".png";
+                     
 
             var citytName = $("<h1 class='card-title'>").text(name + ", " + country);
             
@@ -380,11 +379,11 @@ $(document).ready(function () {
             $("#temperature").text("Temperature:  " + Math.round(temp) + " °F");
             $("#max-min-temp").text("Max/Min Temp:  " + Math.round(response.main.temp_max) + " °F / " + Math.round(response.main.temp_min) + " °F");
             // $("#condition").attr("src", iconurl);
-            // $("#wcondition").text("Condition: " + response.weather.id);
+            $("#wcondition").text("Conditions: " + response.weather[0].description);
             $("#wind").text("Wind Speed: " + Math.round(response.wind.speed) + " mph");
             $("#humidity").text("Humidity: " + response.main.humidity + " %");
 
-            console.log(temp);
+            console.log(response.weather[0].description);
             console.log(name + ", " + country);
 
 

@@ -59,6 +59,7 @@ body {
     filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    /* line-height: 20px; */
     color: black;
     background-color: #e5e6eb;
     border: 1px solid black;
@@ -72,7 +73,9 @@ body {
     -webkit-filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
     filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 18px;
     padding-left: 10px;
+    padding-right: 10px;
     background-color: #e5e6eb;
     border: 1px solid black;
     border-radius: 5px;
