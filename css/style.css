@@ -131,10 +131,8 @@ h3{
 
 
 footer {
-
     padding-top: 3rem;
     padding-bottom: 3rem;
-
 }
 
 footer img {
@@ -143,6 +141,10 @@ footer img {
     top: 50%; 
     margin-left: -150px;
     margin-top: -150px;
+}
+.page-footer {
+    background-color: #173F5F;
+    color: #3caea3;
 }
 
 #map{
