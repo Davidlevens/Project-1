@@ -133,6 +133,7 @@ h3{
 footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    border-top: solid white 10px;
 }
 
 footer img {
