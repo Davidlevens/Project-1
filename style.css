@@ -1,0 +1,248 @@
+#scroller {
+    position: relative;
+    width: 100%; 
+    height: 60px; 
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+#scroller .innerScrollArea {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#scroller ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+#scroller li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+
+}
+
+#scroller li {
+    white-space: nowrap;
+}
+
+.scrollList {
+white-space: nowrap;
+}
+
+h3{
+    color: white;
+    font-size: 40px;
+    height: 70px;    
+    -webkit-filter: drop-shadow(3px 3px 3px #222 );
+    filter: drop-shadow(3px 3px 3px #222);
+    padding: 20px;
+    font-family: 'Fugaz One', cursive;
+    animation: infinite;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+.jumbotron {
+
+    text-align: center;
+    color: white;
+    background: none;
+    padding-bottom: 0;
+}
+
+.card{
+    border: none;
+}
+
+body {
+
+    background-color: black;
+    background-image: url(https://source.unsplash.com/featured/?travel,beach,cities);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+#newsFeed{
+    align-content: center;
+}
+
+.card-img{
+
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px #1d1d1d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-img img{
+
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.imgNews {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.newsTitle {
+    font-size: 15px;
+    -webkit-filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
+    filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    /* line-height: 20px; */
+    color: black;
+    background-color: #e5e6eb;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 2px;
+}
+
+.newsDes {
+    font-size: 15px;
+    -webkit-filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
+    filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #e5e6eb;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 0px;
+   
+}
+
+#slider {
+    height: 500px;
+    overflow-y: auto;
+}
+
+h1{
+
+    font-size: 100px;
+    -webkit-filter: drop-shadow(3px 3px 3px #222 );
+    filter: drop-shadow(3px 3px 3px #222);
+}
+
+
+
+.card-body {
+    
+    text-align: center;
+    
+}
+
+.card {
+    margin-bottom:10px;
+}
+
+
+.search-results {
+
+    display:none;
+
+}
+
+
+#paperPlane{
+    width: 5%;
+    height: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-filter: drop-shadow(5px 5px 5px #222 );
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#logo1 {
+    width: auto;
+    height: 35px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222 );
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#logo2 {
+    width: auto;
+    height: 125px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222 );
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+
+.btn-primary {
+    background-color: #000317;
+    border-color: #000317;
+}
+
+.btn-primary:hover {
+    background-color: #e5e6eb;
+    border-color: #e5e6eb;
+    color: #222;
+
+}
+
+.navbar {
+    padding: .7rem;
+    background-color: #222222;
+}
+
+.navbar-nav li {
+    padding-right: 20px;
+}
+
+.nav-link {
+    font-size: 1rem;
+}
+
+
+footer {
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+
+footer img {
+    position: relative;
+    left: 50%;
+    top: 50%; 
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+#map{
+    height: 100%;
+    
+  }
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mapGoogle{
+      min-height: 500px;
+  }
+  #map-display{
+      min-height: 500px;
+  }
