@@ -19,8 +19,9 @@ body {
     background-color: black;
     background-image: url(https://source.unsplash.com/featured/?travel,beach,cities);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center center;
+    background-blend-mode: lighten;
 }
 
 
@@ -100,6 +101,12 @@ h3{
     font-size: 50px;
     -webkit-filter: drop-shadow(3px 3px 3px #222 );
     filter: drop-shadow(3px 3px 3px #222);
+}
+
+p {
+    /* font-size: 20px; */
+    -webkit-filter: drop-shadow(1px 1px 1px rgb(233, 233, 233) );
+    filter: drop-shadow(1px 1px 1px rgb(233, 233, 233) );
 }
 
 .card-body {
@@ -184,6 +191,34 @@ footer img {
     top: 50%; 
     margin-left: -150px;
     margin-top: -150px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.page-footer {
+    background-color: #173F5F;
+    background-blend-mode:overlay;
+    /* color: #3caea3; */
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#contact {
+    height: 250px;
+}
+
+#copyright {
+    font-size: 15px;
+    color: rgb(9, 173, 22);
+    -webkit-filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
+    filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
+    background-color: #173F5F;
+    background-blend-mode:overlay;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 0px;
+   
 }
 
 #map{
