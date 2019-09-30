@@ -256,7 +256,7 @@ footer img {
 }
 
 .page-footer {
-    background-color: #173F5F;
+    background-color: rgb(55, 125, 182, 0.5);
     height: 250px;
     border: 1px solid black;
     border-radius: 5px;
@@ -271,8 +271,7 @@ footer img {
     color: rgb(9, 173, 22);
     -webkit-filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
     filter: drop-shadow(3px 3px 3px rgb(78, 5, 5));
-    background-color: #173F5F;
-    background-blend-mode:overlay;
+    background-color: rgb(55, 125, 182, 0.5);
     border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 0px;
