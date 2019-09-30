@@ -33,8 +33,9 @@
 	The site is deployed at https://davidlevens.github.io/Project-1/!
 	On page load, a splash page with a random background image and an input field for entering a destination city and below it button links to the top 10 destinations for the year according to "". Once a city is either entered and the "Let's go!" submit button is clicked or one of the pre-selected city buttons is clicked, an image of the inputed city loads with the city name and respective country code being displayed. Displayed below it are a two columned section that loads the current weather and a map of the inputed city with points of interest including local restaurants, bars, museums, and stores. Following below the two column section is a footer with contact information, links to social media and copyright information. 
 
+
 ### Prerequisites
-	There are no prerequisite softwares that you need to install to run this application. This application is deployed in GitHub.
+	There are no prerequisite softwares that you need to install to run this application. This application is deployed in Git
 
 # First Group Project Assigment 
 ### Coding Requirements: 
@@ -67,4 +68,5 @@ Just do your own thing. Be creative! Be ambitious!
   *	A demonstration of its functionality
   *	Directions for future development
   *	Treat the presentation seriously! 
-  *	Talking intelligently about tech > doing tech sometimes. 
+  *	Talking intelligently about tech > doing tech sometimes.
+
