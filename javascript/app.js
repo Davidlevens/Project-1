@@ -204,7 +204,7 @@ $(document).ready(function () {
 
         var citysearched = $("#inputCity").val().trim();
 
-        database.ref(path).set({
+        database.ref(path).push({
             citysearched: citysearched
         })
 
