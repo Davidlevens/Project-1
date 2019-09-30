@@ -27,12 +27,20 @@
 
 
 
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/a5a2c0b4da.js" crossorigin="anonymous"></script>
+
+    <!--Google Fonts-->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Lobster&display=swap" rel="stylesheet">
+
 
 
 </head>
 
 <body>
-       
+
     <!-- MAIN CONTAINER -->
     <div class="container">
 
@@ -55,7 +63,7 @@
         <!-- SEARCH BUTTON AND MODAL BUTTON -->
         <div class="row">
             <div class="input-group input-group-lg">
-                <input type="text" id="inputCity" class="form-control" aria-label="Sizing example input"
+                <input type="text" pattern=".*" id="inputCity" class="form-control" aria-label="Sizing example input"
                     placeholder="Type in your destination city" aria-describedby="inputGroup-sizing-sm" />
                 &nbsp;&nbsp;<div class="mx-auto" id="btnBox">
                     <button type="button" id="searchCity" class="btn btn-secondary btn-lg searchNew">
@@ -204,11 +212,107 @@
             </div>
         </div>
     </div>
-    <div class="row" style="padding: 1%;"></div>
-    </div>
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="page-footer font-small stylish-color-dark pt-4 fixed bottom">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 mx-auto">
 
 
-    </div>
+                        <br>
+                        <img class="logo">
+                        <img src="assets/images/letsgologo4.png" alt="logo" height="250" width="250">
+
+                    </div>
+
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mx-auto">
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 mx-auto" id="contact">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Information</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <p>1 University Place</p>
+                            </li>
+                            <li>
+                                <p>Stamford, CT 06901</p>
+                            </li>
+                            <li>
+                                <a href="mailto:info@letsgotravel.com#!">info@letsgotravel.com</a>
+                            </li>
+                            <li>
+                                <a href="#!">www.letsgotravel.com</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+
+            <!-- Social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                        <i class="fab fa-facebook-f"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                        <i class="fab fa-twitter"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-gplus mx-1">
+                        <i class="fab fa-google-plus-g"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                        <i class="fab fa-linkedin-in"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-dribbble mx-1">
+                        <i class="fab fa-dribbble"> </i>
+                    </a>
+                </li>
+            </ul>
+
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3" id="copyright">© 2019 Copyright: Made by Andrea Williams,
+                Carlos Quinones,
+                David Levens, Liana Bette
+            </div>
+        </footer>
     </div>
 
     <!-- VARIOS SCRIPTS FOR REFERENCE  -->

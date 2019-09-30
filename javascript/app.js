@@ -46,9 +46,7 @@ $(document).ready(function () {
                 else {
                     resultsMap.setZoom(13);
                 }
-            } else {
-                alert('Geocode was not successful for the following reason: ' + status);
-            }
+            } 
         });
     }
 
@@ -113,13 +111,15 @@ $(document).ready(function () {
     }
 
 
-    //     // Code radio buttons
-    //    $(document.body).on("click", ".top-places", function () {
-    //        var place = $(this).attr("data-place");
-    //        console.log(place);
-    //        doSearch(place);
-    //        geocodeAdress(geocoder, map);
-    //    });
+        // Code btn btn-secondary top-places
+       $(document.body).on("click", ".top-places", function () {
+           var place = $(this).attr("data-place");
+           console.log(place);
+           getWeather(event);
+        //    doSearch(place);
+           geocodeAdress(geocoder, map);
+           
+       });
     //    getWeather(event);
     //    function doSearch(place) {
     //        // 1. get map
@@ -181,16 +181,16 @@ $(document).ready(function () {
     // FIREBASE
 
     var firebaseConfig = {
-        apiKey: "AIzaSyAkBpVFYyWDdcG2PbcsJXVA0mGC1qn2KYo",
-        authDomain: "booming-monitor-252720.firebaseapp.com",
-        databaseURL: "https://booming-monitor-252720.firebaseio.com",
-        projectId: "booming-monitor-252720",
+        apiKey: "AIzaSyDDWolQRMgGEXj6OS_x0mnH8gVeQudWjiA",
+        authDomain: "let-s-go-18c71.firebaseapp.com",
+        databaseURL: "https://let-s-go-18c71.firebaseio.com",
+        projectId: "let-s-go-18c71",
         storageBucket: "",
-        messagingSenderId: "718629106456",
-        appId: "1:718629106456:web:9e5f5631f940c3e86ca46d"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+        messagingSenderId: "451456448969",
+        appId: "1:451456448969:web:f990bb025f938a4ae71018"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
 
     // Get a reference to the database service
     var database = firebase.database();
@@ -204,7 +204,7 @@ $(document).ready(function () {
 
         var citysearched = $("#inputCity").val().trim();
 
-        database.ref(path).push({
+        database.ref(path).set({
             citysearched: citysearched
         })
 
@@ -296,7 +296,7 @@ $(document).ready(function () {
         city = city.split(",")[0];
         console.log(city);
 
-        // 'q=' + country +
+      
         var queryURL = 'https://newsapi.org/v2/top-headlines?' +
             'q=' + city +
             '&from=2019-09-27&' +
@@ -363,7 +363,7 @@ $(document).ready(function () {
             method: "GET"
 
         }).then(function (response) {
-            console.log("line369" + response);
+            console.log(event);
             console.log(queryURL);
 
             var temp = response.main.temp;
@@ -378,7 +378,6 @@ $(document).ready(function () {
             $("#cityNameDisplay").append(citytName);
             $("#temperature").text("Temperature:  " + Math.round(temp) + " °F");
             $("#max-min-temp").text("Max/Min Temp:  " + Math.round(response.main.temp_max) + " °F / " + Math.round(response.main.temp_min) + " °F");
-            // $("#condition").attr("src", iconurl);
             $("#wcondition").text("Conditions: " + response.weather[0].description);
             $("#wind").text("Wind Speed: " + Math.round(response.wind.speed) + " mph");
             $("#humidity").text("Humidity: " + response.main.humidity + " %");
