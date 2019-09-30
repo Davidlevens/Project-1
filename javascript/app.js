@@ -41,6 +41,7 @@ $(function(){
     setInterval(doScroll, 30);
     tweenToNewSpeed(controller.fullSpeed);
 });
+
 // API MAP
 var map;
 
