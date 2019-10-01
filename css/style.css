@@ -161,7 +161,7 @@ h5 {
     margin-top: 0px;
 }
 
-p {
+p2 {
     font-size: 10px;
     font-family: Tahoma, Geneva, sans-serif;
     color: black;
@@ -292,8 +292,15 @@ footer img {
   .mapGoogle{
       min-height: 500px;
   }
+
   #map-display{
       min-height: 500px;
   }
+
+  #error {
+    font-size: 25px;
+    color: crimson;
+    text-align: center;
+}
 
   
