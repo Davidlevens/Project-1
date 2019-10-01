@@ -374,32 +374,18 @@ $(document).ready(function () {
                 setTimeout(initializeSlider, 1000);
             });
 
-        $('#paperPlane').fadeOut('slow', function () {
-            $('.search-results').fadeIn("slow");
-        });
+        
     });
 
-    //a timer will call this function, and the rotation will begin
-    function rotate() {
-        $('#next').click();
-    }
-
-
-    function initializeSlider() {
-        $("#slider").lightSlider({
-            adaptiveHeight: true,
-            item: 1,
-            slideMargin: 0,
-            loop: true
-        });
-    }
+        
     // API WEATHER
     function getWeather(event) {
         event.preventDefault();
 
         var city = $("#inputCity").val().trim();
 
-
+        
+         
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=b9c4e2e03106a1fd6d052f7ae1365efb";
 
         $.ajax({
@@ -431,6 +417,8 @@ $(document).ready(function () {
 
 
         });
+
+    
     }
 
 
