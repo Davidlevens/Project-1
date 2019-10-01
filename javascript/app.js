@@ -155,25 +155,7 @@ $(document).ready(function () {
     }
 
 
-        // Code btn btn-secondary top-places
-       $(document.body).on("click", ".top-places", function () {
-           var place = $(this).attr("data-place");
-           console.log(place);
-           place = $("#inputCity").val().trim();
-           geocodeAdress(geocoder, map);
-           getWeather(event);
-           
-       });
        
-    //    function doSearch(place) {
-    //        // 1. get map
-    //        // 2. get weather
-    //        // 3. get packing lisgt
-    //    }
-
-    //
-
-
     $("#searchCity").on("click", function () {
         city = $("#inputCity").val();
         geocodeAdress(geocoder, map);
