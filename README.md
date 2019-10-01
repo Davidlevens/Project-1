@@ -22,21 +22,6 @@ Let's Go! helps travelers plan a trip by providing current weather and news as w
 Destination traveling is a passion of our team and the motivation was to create a website that packages our travel interests into one website instead of searching multiple travel sites. The goal was to have a user friendly interface on one page load usefull aggregate travel information for planning a trip to a city destination anywhere in the world.
 
 ### Our Design Process:
-
-# TravelApp
- Travel Application for Project 1 of UCONN Bootcamp
-
- Team name - Let's Go!
-
- Team members -  Dave Levens, Liana Bette, Andrea Williams, Carlos Quinones
-
-### Overall application’s concept: 
-	Let's Go! helps travelers plan a trip by providing current weather and news as well as a city map with useful data including local restaurants, bars, museums, and stores. 
-
-### The motivation for its development:
-	Destination traveling is a passion of our team and the motivation was to create a website that packages our travel interests into one website instead of searching multiple travel sites. The goal was to have a user friendly interface on one page load usefull aggregate travel information for planning a trip to a city destination anywhere in the world.
-
-### Our design process:
   *	Our design process consisted of meeting as a group.
   *	Discussing our strengths and weaknesses.
   *	Breaking down into two groups for front and back end design.
@@ -49,7 +34,7 @@ Destination traveling is a passion of our team and the motivation was to create 
   * Class Time - Team Synch Up & Reviews
   * QA - Unit Testing, Peer Reviews, Bug Tracking
 
-### The technologies used (and briefly how they work):	
+### The technologies used:	
   *	API - GooglePlaces and OpenWeather
   *	Framework - Bootstrap
   *	Programing languages - Javascript, JQuery 
@@ -98,5 +83,4 @@ Just do your own thing. Be creative! Be ambitious!
   *	A demonstration of its functionality
   *	Directions for future development
   *	Treat the presentation seriously! 
-  *	Talking intelligently about tech > doing tech sometimes.
-
+  *	Talking intelligently about tech > doing tech sometimes. 
