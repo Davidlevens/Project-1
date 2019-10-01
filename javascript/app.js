@@ -159,12 +159,12 @@ $(document).ready(function () {
        $(document.body).on("click", ".top-places", function () {
            var place = $(this).attr("data-place");
            console.log(place);
-           getWeather(event);
-        //    doSearch(place);
+           place = $("#inputCity").val().trim();
            geocodeAdress(geocoder, map);
+           getWeather(event);
            
        });
-    //    getWeather(event);
+       
     //    function doSearch(place) {
     //        // 1. get map
     //        // 2. get weather
